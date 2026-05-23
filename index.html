@@ -400,7 +400,20 @@ strong { font-weight: 600; color: var(--ink); }
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-/* Map links */
+/* Tracker table */
+.tracker-row td { padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.tracker-row:last-child td { border-bottom: none; }
+.tracker-row:active td, .tracker-row.editing td { background: var(--accent-soft); }
+.tracker-row td:focus { outline: 2px solid var(--accent); outline-offset: -2px; background: var(--paper); }
+.status-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.04em; cursor: pointer; user-select: none; white-space: nowrap; }
+.status-booked { background: var(--green-soft); color: var(--green); }
+.status-tbd { background: var(--red-soft); color: var(--accent-deep); }
+.status-optional { background: var(--amber-soft); color: var(--gold); }
+.status-na { background: var(--canal-soft); color: var(--ink-faded); }
+@media (max-width: 480px) {
+  #tracker-table { font-size: 0.74rem; }
+  .tracker-row td { padding: 0.45rem 0.5rem; }
+}
 .map-link { display: inline-flex; align-items: center; gap: 0.2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--canal); background: var(--canal-soft); padding: 0.12rem 0.4rem; border-radius: 4px; text-decoration: none; margin-left: 0.3rem; vertical-align: middle; border: 1px solid rgba(26,58,58,0.15); white-space: nowrap; }
 .map-link:active { background: var(--canal); color: var(--paper); }
 .slot-maps { margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
@@ -419,7 +432,6 @@ strong { font-weight: 600; color: var(--ink); }
 <nav>
   <a href="#progress">Progress</a>
   <a href="#essentials">Essentials</a>
-  <a href="#hotel">Hotel</a>
   <a href="#book">Bookings</a>
   <a href="#day1">Wed</a>
   <a href="#day2">Thu</a>
@@ -464,80 +476,47 @@ strong { font-weight: 600; color: var(--ink); }
   </div>
 </section>
 
-<section id="hotel">
-  <h2><span class="num">01</span> Where to stay</h2>
-  <div class="card">
-    <p style="font-size:0.9rem;color:var(--ink-soft);margin-bottom:0.8rem;">Tap a hotel to mark it as your pick. <strong>Book within 3–4 days.</strong></p>
-
-    <div class="hotel" data-hotel="concert" data-cost="723">
-      <div class="hotel-name">The Concert Hotel ⭐ <span class="chosen-badge">★ chosen</span></div>
-      <div class="tier">💸 MID · BEST VALUE</div>
-      <div class="hotel-meta">Museum Quarter · De Lairessestraat 11 · £723 total (4 nts) · 7.8/10</div>
-      <div class="hotel-why">Top pick. Van Gogh 8 min walk, Rijksmuseum 12 min, Vondelpark 5 min. Airport shuttle for early Sun departure. Delicious breakfast. Best score of all options.</div>
-    </div>
-    <div class="hotel" data-hotel="leonardo" data-cost="836">
-      <div class="hotel-name">Leonardo Hotel Museum Quarter <span class="chosen-badge">★ chosen</span></div>
-      <div class="tier">💸💸 MID</div>
-      <div class="hotel-meta">Museum Quarter · PC Hooftstraat 2 · £836 total · 7.3/10</div>
-      <div class="hotel-why">Rijksmuseum 230m away. Upscale shopping street. Note: shower design issues in reviews.</div>
-    </div>
-    <div class="hotel" data-hotel="pulitzer" data-cost="1800">
-      <div class="hotel-name">Pulitzer Amsterdam <span class="chosen-badge">★ chosen</span></div>
-      <div class="tier">💸💸💸 LUXE</div>
-      <div class="hotel-meta">Jordaan · £400–600/night · ~£1,800 total</div>
-      <div class="hotel-why">25 connected canal houses, photo-perfect, characterful corridors.</div>
-    </div>
-    <div class="hotel" data-hotel="dylan" data-cost="1800">
-      <div class="hotel-name">The Dylan <span class="chosen-badge">★ chosen</span></div>
-      <div class="tier">💸💸💸 LUXE</div>
-      <div class="hotel-meta">Canal District · £400–600/night · ~£1,800 total</div>
-      <div class="hotel-why">Hidden courtyard, 17th century, romantic.</div>
-    </div>
-    <div class="hotel" data-hotel="canalhouse" data-cost="1200">
-      <div class="hotel-name">Canal House <span class="chosen-badge">★ chosen</span></div>
-      <div class="tier">💸💸 MID</div>
-      <div class="hotel-meta">Jordaan · £250–350/night · ~£1,200 total</div>
-      <div class="hotel-why">Boutique, characterful, on a quieter canal.</div>
-    </div>
-    <div class="hotel" data-hotel="nh" data-cost="1000">
-      <div class="hotel-name">NH Collection Doelen <span class="chosen-badge">★ chosen</span></div>
-      <div class="tier">💸💸 MID</div>
-      <div class="hotel-meta">Canal District · £200–300/night · ~£1,000 total</div>
-      <div class="hotel-why">Friend's pick. Central, reliable.</div>
-    </div>
-    <div class="hotel" data-hotel="mercier" data-cost="700">
-      <div class="hotel-name">Hotel Mercier <span class="chosen-badge">★ chosen</span></div>
-      <div class="tier">💸 BUDGET</div>
-      <div class="hotel-meta">Jordaan · £150–200/night · ~£700 total</div>
-      <div class="hotel-why">Boutique on a budget, well-rated.</div>
-    </div>
-    <div class="hotel" data-hotel="hoxton" data-cost="750">
-      <div class="hotel-name">The Hoxton Amsterdam <span class="chosen-badge">★ chosen</span></div>
-      <div class="tier">💸 BUDGET</div>
-      <div class="hotel-meta">Canal District · £150–220/night · ~£750 total</div>
-      <div class="hotel-why">Design-led, social spaces.</div>
-    </div>
-
-    <div class="recommended"><strong>Top pick:</strong> The Concert Hotel — best value, highest score, Museum Quarter, airport shuttle.</div>
-  </div>
-</section>
 
 <section id="book">
-  <h2><span class="num">02</span> Book this week</h2>
-  <p style="font-size:0.85rem;color:var(--ink-soft);margin:-0.5rem 0 0.75rem;">Tap to mark booked.</p>
-  <div class="card">
-    <ul class="booking-list" id="booking-list">
-      <li class="done" data-key="flights"><div class="bk-main"><div class="bk-name">Flights</div><div class="bk-detail">EasyJet LTN ↔ AMS · €254 total ✓</div></div></li>
-      <li class="done" data-key="annefrank"><div class="bk-main"><div class="bk-name">Anne Frank House</div><div class="bk-detail">Wed 18:30 · €33 ✓</div></div></li>
-      <li data-key="hotel"><div class="bk-main"><div class="bk-name">Hotel · 4 nights</div><div class="bk-detail">booking.com or direct · £700–1,800</div></div></li>
-      <li data-key="walkingtour"><div class="bk-main"><div class="bk-name">Free Walking Tour</div><div class="bk-detail">neweuropetours.eu or freewalkingtoursamsterdam.com · Thu 10:00 · tip-based (~€10 pp)</div></div></li>
-      <li data-key="vangogh"><div class="bk-main"><div class="bk-name">Van Gogh Museum</div><div class="bk-detail">tickets.vangoghmuseum.com · Thu 12:15 · €25 pp (€10 student)</div></div></li>
-      <li data-key="rijks"><div class="bk-main"><div class="bk-name">Rijksmuseum</div><div class="bk-detail">rijksmuseum.nl · Thu 14:30 · €25 pp</div></div></li>
-      <li data-key="blauw"><div class="bk-main"><div class="bk-name">Restaurant Blauw</div><div class="bk-detail">restaurantblauw.nl · Sat 19:30 · ~€80 for two · <strong>flag onion allergy when booking</strong></div></div></li>
-      <li data-key="cruise"><div class="bk-main"><div class="bk-name">Canal cruise</div><div class="bk-detail">Lovers or Stromma · Thu 21:00 blue-hour · €20–30 pp</div></div></li>
-      <li data-key="verzets"><div class="bk-main"><div class="bk-name">Verzetsmuseum (optional)</div><div class="bk-detail">rainy-Sat backup · €17 pp</div></div></li>
-    </ul>
+  <h2><span class="num">01</span> Bookings tracker</h2>
+  <p style="font-size:0.85rem;color:var(--ink-soft);margin:-0.5rem 0 0.75rem;">Tap any row to edit. Tap status badge to cycle through.</p>
+
+  <div class="card" style="padding:0;overflow:hidden;">
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table id="tracker-table" style="width:100%;border-collapse:collapse;font-size:0.8rem;min-width:600px;">
+        <thead>
+          <tr style="background:var(--canal);color:var(--paper);">
+            <th style="padding:0.6rem 0.7rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.05em;font-weight:500;">ITEM</th>
+            <th style="padding:0.6rem 0.7rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.05em;font-weight:500;">DATE</th>
+            <th style="padding:0.6rem 0.7rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.05em;font-weight:500;">STATUS</th>
+            <th style="padding:0.6rem 0.7rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.05em;font-weight:500;">TIME (CEST)</th>
+            <th style="padding:0.6rem 0.7rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.05em;font-weight:500;">COST €</th>
+            <th style="padding:0.6rem 0.7rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.05em;font-weight:500;">COST £</th>
+            <th style="padding:0.6rem 0.7rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.05em;font-weight:500;">REF / NOTES</th>
+          </tr>
+        </thead>
+        <tbody id="tracker-body"></tbody>
+      </table>
+    </div>
+    <div style="padding:0.6rem 0.8rem;border-top:1px solid var(--border);display:flex;gap:0.5rem;align-items:center;">
+      <button onclick="addTrackerRow()" style="background:var(--accent);color:white;border:none;border-radius:6px;padding:0.4rem 0.8rem;font-size:0.78rem;font-family:'Inter',sans-serif;cursor:pointer;">+ Add row</button>
+      <button onclick="clearTrackerRow()" style="background:transparent;color:var(--ink-faded);border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.8rem;font-size:0.78rem;font-family:'Inter',sans-serif;cursor:pointer;">Delete last</button>
+      <span style="font-size:0.72rem;color:var(--ink-faded);font-family:'JetBrains Mono',monospace;margin-left:auto;">auto-saved</span>
+    </div>
   </div>
+
+  <!-- Legacy hidden list for progress bar compatibility -->
+  <ul id="booking-list" style="display:none;">
+    <li class="done" data-key="flights"></li>
+    <li class="done" data-key="annefrank"></li>
+    <li class="done" data-key="hotel"></li>
+    <li data-key="walkingtour"></li>
+    <li data-key="vangogh"></li>
+    <li data-key="rijks"></li>
+    <li data-key="blauw"></li>
+    <li data-key="cruise"></li>
+    <li data-key="verzets"></li>
+  </ul>
 </section>
 
 <section id="day1">
@@ -789,7 +768,7 @@ strong { font-weight: 600; color: var(--ink); }
   <div class="card">
     <div class="budget-list">
       <div class="row"><span class="label">Flights</span><span class="amt">£220 ✓</span></div>
-      <div class="row dynamic"><span class="label">Hotel × 4 (pick above)</span><span class="amt" id="hotel-cost">£700–1,800</span></div>
+      <div class="row"><span class="label">The Concert Hotel × 4 nights</span><span class="amt">£723 ✓</span></div>
       <div class="row"><span class="label">Anne Frank tickets</span><span class="amt">£29 ✓</span></div>
       <div class="row"><span class="label">Van Gogh + Rijks × 2</span><span class="amt">£86</span></div>
       <div class="row"><span class="label">STRAAT × 2</span><span class="amt">£32</span></div>
@@ -801,7 +780,7 @@ strong { font-weight: 600; color: var(--ink); }
       <div class="row"><span class="label">Coffeeshop visits</span><span class="amt">£40–100</span></div>
       <div class="row"><span class="label">Vinyl shopping</span><span class="amt">£50–200</span></div>
       <div class="row"><span class="label">Buffer / souvenirs</span><span class="amt">£100</span></div>
-      <div class="row total dynamic"><span class="label">Total</span><span class="amt" id="total-cost">£1,700–2,450</span></div>
+      <div class="row total dynamic"><span class="label">Total</span><span class="amt">£1,770–2,170</span></div>
     </div>
   </div>
 </section>
@@ -842,7 +821,7 @@ strong { font-weight: 600; color: var(--ink); }
 </section>
 
 <footer>
-  Saved offline · State saves automatically · v10 · <a href="https://github.com" target="_blank" style="color:var(--ink-faded);text-decoration:none;">GitHub Pages</a>
+  Saved offline · State saves automatically · v13 · <a href="https://github.com" target="_blank" style="color:var(--ink-faded);text-decoration:none;">GitHub Pages</a>
   <br>
   <button onclick="if(confirm('Reset all checkboxes and choices?')){localStorage.removeItem('nltrip');location.reload();}">Reset all</button>
 </footer>
@@ -906,6 +885,8 @@ function updateCountdown() {
 }
 updateCountdown();
 setInterval(updateCountdown, 30000);
+// Also run after full page load in case of sandbox timing issues
+window.addEventListener('load', updateCountdown);
 
 // ============== TOUCH HELPER ==============
 // Adds both click and touchend, prevents double-fire
@@ -951,39 +932,7 @@ document.querySelectorAll('#booking-list li').forEach(li => {
   });
 });
 
-// ============== HOTEL CHOOSER ==============
-document.querySelectorAll('.hotel').forEach(h => {
-  if (state.hotel === h.dataset.hotel) h.classList.add('chosen');
-  addTapListener(h, function() {
-    if (h.classList.contains('chosen')) {
-      h.classList.remove('chosen');
-      state.hotel = null;
-    } else {
-      document.querySelectorAll('.hotel').forEach(x => x.classList.remove('chosen'));
-      h.classList.add('chosen');
-      state.hotel = h.dataset.hotel;
-    }
-    save();
-    updateHotelCost();
-  });
-});
 
-function updateHotelCost() {
-  const chosen = document.querySelector('.hotel.chosen');
-  const el = document.getElementById('hotel-cost');
-  const total = document.getElementById('total-cost');
-  if (chosen) {
-    const cost = parseInt(chosen.dataset.cost);
-    el.textContent = '£' + cost.toLocaleString();
-    const baseLow = 220 + 29 + 86 + 32 + 40 + 10 + 300 + 40 + 40 + 50 + 100;
-    const baseHigh = 220 + 29 + 86 + 32 + 30 + 40 + 20 + 375 + 40 + 100 + 200 + 100;
-    total.textContent = '£' + (baseLow + cost).toLocaleString() + '–£' + (baseHigh + cost).toLocaleString();
-  } else {
-    el.textContent = '£700–1,800';
-    total.textContent = '£1,700–2,450';
-  }
-}
-updateHotelCost();
 
 // ============== DAY TRIP CHOOSER ==============
 document.querySelectorAll('.option').forEach(o => {
@@ -1072,5 +1021,109 @@ document.querySelectorAll('nav a').forEach(a => {
 </script>
 
 
+<script>
+// ============== BOOKINGS TRACKER ==============
+const TRACKER_KEY = 'nltrip_tracker';
+const STATUSES = ['BOOKED','TBD','OPTIONAL','N/A'];
+const STATUS_CLASS = { 'BOOKED':'status-booked','TBD':'status-tbd','OPTIONAL':'status-optional','N/A':'status-na' };
+
+const DEFAULT_ROWS = [
+  { item:'Flight LTN → AMS', date:'Wed 27 May', status:'BOOKED', time:'06:00 BST → 08:15 CEST', eur:'127.85', gbp:'110.40', ref:'KCFNMRF · EasyJet' },
+  { item:'Flight AMS → LTN', date:'Sun 31 May', status:'BOOKED', time:'09:50 CEST → 10:00 BST', eur:'127.85', gbp:'110.40', ref:'KCFNMRF · EasyJet' },
+  { item:'The Concert Hotel · 4 nts', date:'Wed 27 – Sun 31 May', status:'TBD', time:'Check-in / Check-out TBC', eur:'', gbp:'723', ref:'De Lairessestraat 11' },
+  { item:'Anne Frank House', date:'Wed 27 May', status:'BOOKED', time:'18:30 – 18:45 CEST', eur:'33', gbp:'28.51', ref:'N2616031802 · Westermarkt 20' },
+  { item:'Free Walking Tour', date:'Thu 28 May', status:'TBD', time:'10:00 CEST · Dam Square', eur:'~10 tip pp', gbp:'', ref:'neweuropetours.eu or freewalkingtoursamsterdam.com' },
+  { item:'Van Gogh Museum', date:'Thu 28 May', status:'BOOKED', time:'12:15 CEST', eur:'25 / 10 student', gbp:'', ref:'tickets.vangoghmuseum.com ✓' },
+  { item:'Rijksmuseum', date:'Thu 28 May', status:'TBD', time:'15:00 CEST', eur:'25 pp', gbp:'', ref:'rijksmuseum.nl · book at rijksmuseum.nl' },
+  { item:'Canal Cruise', date:'Thu 28 May', status:'TBD', time:'21:00 CEST (blue hour)', eur:'20–30 pp', gbp:'', ref:'Lovers or Stromma · book 24–48h ahead' },
+  { item:'STRAAT Museum', date:'Fri 29 May', status:'TBD', time:'16:30 CEST', eur:'21.50 / 13.50 student', gbp:'', ref:'NDSM Wharf · straatmuseum.com' },
+  { item:'Restaurant Blauw · rijsttafel', date:'Sat 30 May', status:'TBD', time:'19:30 CEST', eur:'~80 for two', gbp:'', ref:'restaurantblauw.nl · FLAG ONION ALLERGY' },
+  { item:'Verzetsmuseum (if rain Sat)', date:'Sat 30 May', status:'OPTIONAL', time:'', eur:'16 / 8.50 student', gbp:'', ref:'Plantage Kerklaan 61' },
+];
+
+let trackerRows = [];
+try {
+  const saved = localStorage.getItem(TRACKER_KEY);
+  trackerRows = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(DEFAULT_ROWS));
+} catch(e) {
+  trackerRows = JSON.parse(JSON.stringify(DEFAULT_ROWS));
+}
+
+function saveTracker() {
+  try { localStorage.setItem(TRACKER_KEY, JSON.stringify(trackerRows)); } catch(e) {}
+}
+
+function cycleStatus(idx) {
+  const cur = trackerRows[idx].status;
+  const next = STATUSES[(STATUSES.indexOf(cur) + 1) % STATUSES.length];
+  trackerRows[idx].status = next;
+  saveTracker();
+  renderTracker();
+}
+
+function renderTracker() {
+  const tbody = document.getElementById('tracker-body');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+  trackerRows.forEach((row, i) => {
+    const tr = document.createElement('tr');
+    tr.className = 'tracker-row';
+    const fields = ['item','date','status','time','eur','gbp','ref'];
+    fields.forEach(field => {
+      const td = document.createElement('td');
+      if (field === 'status') {
+        const badge = document.createElement('span');
+        badge.className = 'status-badge ' + (STATUS_CLASS[row.status] || 'status-tbd');
+        badge.textContent = row.status;
+        badge.title = 'Tap to change status';
+        const handler = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          cycleStatus(i);
+        };
+        badge.addEventListener('touchend', function(e) { e.preventDefault(); cycleStatus(i); }, { passive: false });
+        badge.addEventListener('click', function(e) { e.stopPropagation(); cycleStatus(i); });
+        td.appendChild(badge);
+      } else {
+        td.contentEditable = 'true';
+        td.textContent = row[field] || '';
+        td.style.minWidth = field === 'item' ? '120px' : field === 'ref' ? '160px' : '70px';
+        td.addEventListener('blur', function() {
+          trackerRows[i][field] = td.textContent.trim();
+          saveTracker();
+        });
+        td.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') { e.preventDefault(); td.blur(); }
+        });
+      }
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+}
+
+function addTrackerRow() {
+  trackerRows.push({ item:'New item', date:'', status:'TBD', time:'', eur:'', gbp:'', ref:'' });
+  saveTracker();
+  renderTracker();
+  // Focus new row's first cell
+  const rows = document.querySelectorAll('.tracker-row');
+  if (rows.length) {
+    const lastRow = rows[rows.length - 1];
+    const firstCell = lastRow.querySelector('td[contenteditable]');
+    if (firstCell) { firstCell.focus(); document.execCommand('selectAll', false, null); }
+  }
+}
+
+function clearTrackerRow() {
+  if (trackerRows.length > 1 && confirm('Delete last row?')) {
+    trackerRows.pop();
+    saveTracker();
+    renderTracker();
+  }
+}
+
+renderTracker();
+</script>
 </body>
 </html>
