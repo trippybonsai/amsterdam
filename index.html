@@ -400,6 +400,10 @@ strong { font-weight: 600; color: var(--ink); }
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+/* Map links */
+.map-link { display: inline-flex; align-items: center; gap: 0.2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--canal); background: var(--canal-soft); padding: 0.12rem 0.4rem; border-radius: 4px; text-decoration: none; margin-left: 0.3rem; vertical-align: middle; border: 1px solid rgba(26,58,58,0.15); white-space: nowrap; }
+.map-link:active { background: var(--canal); color: var(--paper); }
+.slot-maps { margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
 </style>
 </head>
 <body>
@@ -549,26 +553,26 @@ strong { font-weight: 600; color: var(--ink); }
       <div class="day-date">Wed 27</div>
     </div>
     <div class="day-body">
-      <div class="slot"><div class="checkbox" data-key="wed-land"></div><div class="time">08:35</div><div class="slot-content"><div class="slot-title">Land Schiphol</div><div class="slot-note">Train ~17 min to Centraal (€5.60 pp), then tram to hotel. ⚠ Up since ~03:00 — take it easy today.</div></div></div>
+      <div class="slot"><div class="checkbox" data-key="wed-land"></div><div class="time">08:35</div><div class="slot-content"><div class="slot-title">Land Schiphol</div><div class="slot-note">Train ~17 min to Centraal (€5.60 pp), then tram to hotel. ⚠ Up since ~03:00 — take it easy today.<div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Amsterdam+Airport+Schiphol" target="_blank" rel="noopener">📍 Schiphol</a><a class="map-link" href="https://maps.google.com/?q=Amsterdam+Centraal+Station" target="_blank" rel="noopener">📍 Centraal</a></div></div></div></div>
       <div class="slot"><div class="checkbox" data-key="wed-bags"></div><div class="time">10:30</div><div class="slot-content"><div class="slot-title">Drop bags, freshen up</div><div class="slot-note">Most hotels hold luggage if room not ready. Grab a coffee nearby and decompress.</div></div></div>
       <div class="slot"><div class="checkbox" data-key="wed-winkel"></div><div class="time">11:30</div><div class="slot-content">
-        <div class="slot-title"><span class="place">Winkel 43</span> · brunch + apple pie<span class="slot-cost">~€20 for two</span></div>
+        <div class="slot-title"><span class="place">Winkel 43</span><a class="map-link" href="https://maps.google.com/?q=Winkel+43+Noordermarkt+Amsterdam" target="_blank" rel="noopener">📍 map</a> · brunch + apple pie<span class="slot-cost">~€20 for two</span></div>
         <div class="eat"><strong>Why:</strong> universally rated the best Dutch <em>appeltaart</em> — thick crumbly crust, chunky cinnamon-spiced apple, mountain of fresh whipped cream. <strong>Order:</strong> one slice to share, cappuccino + hot chocolate or fresh OJ.</div>
         <div class="warn"><strong>Onion-safe:</strong> apple pie is fine. Avoid savoury items (salads, soups, club sandwiches usually have onion).</div>
-        <div class="alt"><span class="alt-label">Alternatives</span><span class="place">Pluk</span> (lighter brunch, onion-safe bowls) · <span class="place">Saint Jean</span> bakery (croissants + coffee, very quick) · <span class="place">Bakers & Roasters</span> (hearty NZ brunch, ~12 min walk)</div>
+        <div class="alt"><span class="alt-label">Alternatives</span><span class="place">Pluk</span><a class="map-link" href="https://maps.google.com/?q=Pluk+Amsterdam" target="_blank" rel="noopener">📍 map</a> (lighter brunch, onion-safe bowls) · <span class="place">Saint Jean</span><a class="map-link" href="https://maps.google.com/?q=Boulangerie+Saint+Jean+Amsterdam" target="_blank" rel="noopener">📍 map</a> bakery (croissants + coffee, very quick) · <span class="place">Bakers & Roasters</span><a class="map-link" href="https://maps.google.com/?q=Bakers+and+Roasters+Amsterdam+De+Pijp" target="_blank" rel="noopener">📍 map</a> (hearty NZ brunch, ~12 min walk)</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="wed-walk"></div><div class="time">12:30</div><div class="slot-content">
         <div class="slot-title">Jordaan + 9 Streets walk</div>
         <div class="slot-note">Canal-belt boutique zone. Slow pace, browse shops.</div>
         <div class="slot-photo">Golden afternoon light on canal houses · narrow alleys with vanishing-point shots</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Jordaan+Amsterdam" target="_blank" rel="noopener">📍 Jordaan</a><a class="map-link" href="https://maps.google.com/?q=De+Negen+Straatjes+Amsterdam" target="_blank" rel="noopener">📍 9 Streets</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="wed-weed"></div><div class="time">13:30</div><div class="slot-content">
         <div class="slot-title">Coffeeshop stop · Jordaan</div>
-        <div class="slot-weed"><strong>Coffeeshop pick:</strong> <span class="place">Paradox</span> (Eerste Bloemdwarsstraat 2) — tiny, local, quiet, healthy smoothies. Perfect first-day intro. <em>Alt:</em> <span class="place">Dampkring</span> (Haarlemmerstraat) — ornate carved-wood interior, Ocean's 12 set, photogenic. <em>Alt:</em> <span class="place">Boerejongens Jordaan</span> — apothecary-style, knowledgeable staff.</div>
+        <div class="slot-weed"><strong>Coffeeshop pick:</strong> <span class="place">Paradox</span><a class="map-link" href="https://maps.google.com/?q=Coffeeshop+Paradox+Jordaan+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Eerste Bloemdwarsstraat 2) — tiny, local, quiet, healthy smoothies. Perfect first-day intro. <em>Alt:</em> <span class="place">Dampkring</span><a class="map-link" href="https://maps.google.com/?q=Dampkring+Coffeeshop+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Haarlemmerstraat) — ornate carved-wood interior, Ocean's 12 set, photogenic. <em>Alt:</em> <span class="place">Boerejongens Jordaan</span><a class="map-link" href="https://maps.google.com/?q=Boerejongens+Jordaan+Amsterdam" target="_blank" rel="noopener">📍 map</a> — apothecary-style, knowledgeable staff.</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="wed-lunch"></div><div class="time">14:00</div><div class="slot-content">
         <div class="slot-title">Lunch · Jordaan area<span class="slot-cost">~€25–35 for two</span></div>
-        <div class="eat"><strong>Options:</strong> <span class="place">Festina Lente</span> (canal-side, soup + sandwiches, onion-safe choices) · <span class="place">Moeder's</span> (Dutch home cooking, ask onion-free) · <span class="place">Café Toscanini</span> (Italian, pasta safe) · or graze on stroopwafels + cheese from a nearby market stall.</div>
+        <div class="eat"><strong>Options:</strong> <span class="place">Festina Lente</span><a class="map-link" href="https://maps.google.com/?q=Festina+Lente+Jordaan+Amsterdam" target="_blank" rel="noopener">📍 map</a> (canal-side, soup + sandwiches, onion-safe choices) · <span class="place">Moeder's</span><a class="map-link" href="https://maps.google.com/?q=Moeders+Restaurant+Jordaan+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Dutch home cooking, ask onion-free) · <span class="place">Café Toscanini</span><a class="map-link" href="https://maps.google.com/?q=Cafe+Toscanini+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Italian, pasta safe) · or graze on stroopwafels + cheese from a nearby market stall.</div>
         <div class="warn"><strong>Onion-safe:</strong> stick to plain pasta, grilled items, or ask kitchen to build without alliums.</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="wed-rest"></div><div class="time">15:30</div><div class="slot-content"><div class="slot-title">Hotel break</div><div class="slot-note">Rest before Anne Frank — you've been up since 03:00, this matters.</div></div></div>
@@ -576,12 +580,12 @@ strong { font-weight: 600; color: var(--ink); }
         <div class="slot-title">Anne Frank House <span class="pill pill-booked">Booked</span></div>
         <div class="slot-note">Plan 90+ min. Weighty experience.</div>
         <div class="slot-photo">Exterior + Westerkerk tower at dusk · long blue-hour light from 21:00</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Anne+Frank+House+Amsterdam" target="_blank" rel="noopener">📍 Anne Frank House</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="wed-dinner"></div><div class="time">20:30</div><div class="slot-content">
-        <div class="slot-title"><span class="place">Proeflokaal A. van Wees</span> · dinner<span class="slot-cost">~€70 for two</span></div>
+        <div class="slot-title"><span class="place">Proeflokaal A. van Wees</span><a class="map-link" href="https://maps.google.com/?q=Proeflokaal+A+van+Wees+Amsterdam" target="_blank" rel="noopener">📍 map</a> · dinner<span class="slot-cost">~€70 for two</span></div>
         <div class="eat"><strong>Why:</strong> 19th-century gin distillery + bruin café — atmospheric, candlelit. More flexible menu than Sonneveld for onion issues. Beer + jenever for you, fresh juice or warme chocomel for him.</div>
         <div class="warn"><strong>Onion-safe:</strong> bitterballen usually safe, cheese plate safe, grilled fish or steak without sauce. Skip stamppot.</div>
-        <div class="alt"><span class="alt-label">Alternatives</span><span class="place">Pesca</span> (modern seafood) · <span class="place">The Pancake Bakery</span> (easy plain savoury pancakes)</div>
+        <div class="alt"><span class="alt-label">Alternatives</span><span class="place">Pesca</span><a class="map-link" href="https://maps.google.com/?q=Pesca+Amsterdam" target="_blank" rel="noopener">📍 map</a> (modern seafood) · <span class="place">The Pancake Bakery</span><a class="map-link" href="https://maps.google.com/?q=The+Pancake+Bakery+Amsterdam" target="_blank" rel="noopener">📍 map</a> (easy plain savoury pancakes)</div>
       </div></div>
     </div>
   </div>
@@ -596,52 +600,52 @@ strong { font-weight: 600; color: var(--ink); }
     </div>
     <div class="day-body">
       <div class="slot"><div class="checkbox" data-key="thu-breakfast"></div><div class="time">08:00</div><div class="slot-content">
-        <div class="slot-title"><span class="place">Bakers & Roasters</span> · breakfast<span class="slot-cost">~€35 for two</span></div>
+        <div class="slot-title"><span class="place">Bakers & Roasters</span><a class="map-link" href="https://maps.google.com/?q=Bakers+and+Roasters+Amsterdam+De+Pijp" target="_blank" rel="noopener">📍 map</a> · breakfast<span class="slot-cost">~€35 for two</span></div>
         <div class="eat"><strong>Why:</strong> NZ-style brunch in De Pijp, big hearty plates that fuel a full day. Great fresh juices, proper hot chocolate, excellent coffee.</div>
         <div class="warn"><strong>Onion-safe:</strong> pancakes, French toast, plain eggs benedict (hollandaise on side), granola bowls. Avoid the eggs ranchero / shakshuka.</div>
-        <div class="alt"><span class="alt-label">Alternatives</span><span class="place">Omelegg</span> (build-your-own omelette, very onion-safe) · <span class="place">Coffee & Coconuts</span> (huge photogenic cinema café) · <span class="place">Scandinavian Embassy</span> (best coffee in Amsterdam, Nordic pastries)</div>
+        <div class="alt"><span class="alt-label">Alternatives</span><span class="place">Omelegg</span><a class="map-link" href="https://maps.google.com/?q=Omelegg+Amsterdam" target="_blank" rel="noopener">📍 map</a> (build-your-own omelette, very onion-safe) · <span class="place">Coffee & Coconuts</span><a class="map-link" href="https://maps.google.com/?q=Coffee+and+Coconuts+Amsterdam" target="_blank" rel="noopener">📍 map</a> (huge photogenic cinema café) · <span class="place">Scandinavian Embassy</span><a class="map-link" href="https://maps.google.com/?q=Scandinavian+Embassy+Amsterdam+De+Pijp" target="_blank" rel="noopener">📍 map</a> (best coffee in Amsterdam, Nordic pastries)</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="thu-walkingtour"></div><div class="time">10:00</div><div class="slot-content">
         <div class="slot-title">Free walking tour · Dam Square <span class="pill pill-todo">Book</span></div>
         <div class="slot-note">~2 hrs · tip-based (~€10 pp). Meet at National Monument, Dam Square. SANDEMANs (neweuropetours.eu) or Free Walking Tours Amsterdam (freewalkingtoursamsterdam.com). Book in advance — capped at 15 people. Day 2 is the perfect time: you're rested, and the city context makes the museums richer afterwards.</div>
         <div class="warn">€1.50 pp mandatory Amsterdam tour tax on top of tip.</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Dam+Square+Amsterdam" target="_blank" rel="noopener">📍 Dam Square</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="thu-weed"></div><div class="time">12:00</div><div class="slot-content">
         <div class="slot-title">Coffeeshop stop · pre-museum</div>
-        <div class="slot-weed"><strong>Coffeeshop pick:</strong> <span class="place">The Bulldog Palace</span> (Leidseplein) — the famous one, touristy but iconic, right on your route from Dam to museums. <em>Alt:</em> <span class="place">Grey Area</span> (Oude Leliestraat) — tiny, legendary, Amsterdam institution. <em>Alt:</em> <span class="place">Barney's</span> (Haarlemmerstraat) — smart, well-stocked, relaxed vibe. Keep it light before Van Gogh.</div>
+        <div class="slot-weed"><strong>Coffeeshop pick:</strong> <span class="place">The Bulldog Palace</span><a class="map-link" href="https://maps.google.com/?q=Bulldog+Palace+Leidseplein+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Leidseplein) — the famous one, touristy but iconic, right on your route from Dam to museums. <em>Alt:</em> <span class="place">Grey Area</span><a class="map-link" href="https://maps.google.com/?q=Grey+Area+Coffeeshop+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Oude Leliestraat) — tiny, legendary, Amsterdam institution. <em>Alt:</em> <span class="place">Barney's</span><a class="map-link" href="https://maps.google.com/?q=Barneys+Coffeeshop+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Haarlemmerstraat) — smart, well-stocked, relaxed vibe. Keep it light before Van Gogh.</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="thu-vangogh"></div><div class="time">12:15</div><div class="slot-content">
         <div class="slot-title">Van Gogh Museum <span class="pill pill-todo">Book</span><span class="slot-cost">€25 pp · €10 student</span></div>
         <div class="slot-note">~2.5h. "Sunflowers", "The Bedroom", "Wheatfield with Crows". Audio guide €5 extra. Student ticket valid weekdays only — bring student ID.</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Van+Gogh+Museum+Amsterdam" target="_blank" rel="noopener">📍 Van Gogh Museum</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="thu-lunch"></div><div class="time">14:45</div><div class="slot-content">
         <div class="slot-title">Lunch · Museum Quarter<span class="slot-cost">~€35–45 for two</span></div>
-        <div class="eat"><strong>Options:</strong> <span class="place">The Avocado Show</span> (light, photogenic, modifiable, 8 min walk) · <span class="place">Cobra Café</span> (Museumplein terrace, convenient) · <span class="place">Rijksmuseum Café</span> (saves walking, good sandwiches) · <span class="place">Lot Sixty One</span> (best coffee + light bites, Kinkerstraat).</div>
+        <div class="eat"><strong>Options:</strong> <span class="place">The Avocado Show</span><a class="map-link" href="https://maps.google.com/?q=The+Avocado+Show+Amsterdam" target="_blank" rel="noopener">📍 map</a> (light, photogenic, modifiable, 8 min walk) · <span class="place">Cobra Café</span><a class="map-link" href="https://maps.google.com/?q=Cobra+Cafe+Museumplein+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Museumplein terrace, convenient) · <span class="place">Rijksmuseum Café</span><a class="map-link" href="https://maps.google.com/?q=Rijksmuseum+Amsterdam" target="_blank" rel="noopener">📍 map</a> (saves walking, good sandwiches) · <span class="place">Lot Sixty One</span><a class="map-link" href="https://maps.google.com/?q=Lot+Sixty+One+Coffee+Amsterdam" target="_blank" rel="noopener">📍 map</a> (best coffee + light bites, Kinkerstraat).</div>
         <div class="warn"><strong>Onion-safe:</strong> Avocado Show — ask avo toast without red onion. Rijksmuseum Café — plain sandwiches safe. Cobra — salads modifiable.</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="thu-vondel"></div><div class="time">15:30</div><div class="slot-content">
         <div class="slot-title">Vondelpark stroll</div>
         <div class="slot-note">15–20 min, decompress before Rijksmuseum.</div>
         <div class="slot-photo">Spring greenery, dappled light, herons on the ponds</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Vondelpark+Amsterdam" target="_blank" rel="noopener">📍 Vondelpark</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="thu-rijks"></div><div class="time">15:00</div><div class="slot-content">
         <div class="slot-title">Rijksmuseum <span class="pill pill-booked">Booked 15:00</span><span class="slot-cost">€25 pp</span></div>
         <div class="slot-note">Highlights: Rembrandt's <em>Night Watch</em>, Vermeer's <em>Milkmaid</em> and <em>Little Street</em>, Asian Pavilion, 17th-c doll houses. Gallery of Honour must-do.</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Rijksmuseum+Amsterdam" target="_blank" rel="noopener">📍 Rijksmuseum</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="thu-beer"></div><div class="time">18:00</div><div class="slot-content">
         <div class="slot-title">Drinks · post-museum wind-down<span class="slot-cost">~€20 for two</span></div>
-        <div class="eat"><strong>Options:</strong> <span class="place">Café Welling</span> (behind Concertgebouw, locals' spot, beer + OJ) · <span class="place">Gollem</span> (craft beer haven, Overtoom) · <span class="place">Blauwe Theehuis</span> (Vondelpark UFO-shaped tea house, great terrace) · <span class="place">café 't Smalle</span> (Jordaan, historic brown café on canal steps).</div>
+        <div class="eat"><strong>Options:</strong> <span class="place">Café Welling</span><a class="map-link" href="https://maps.google.com/?q=Cafe+Welling+Amsterdam" target="_blank" rel="noopener">📍 map</a> (behind Concertgebouw, locals' spot, beer + OJ) · <span class="place">Gollem</span><a class="map-link" href="https://maps.google.com/?q=Cafe+Gollem+Amsterdam" target="_blank" rel="noopener">📍 map</a> (craft beer haven, Overtoom) · <span class="place">Blauwe Theehuis</span><a class="map-link" href="https://maps.google.com/?q=Blauwe+Theehuis+Vondelpark+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Vondelpark UFO-shaped tea house, great terrace) · <span class="place">café 't Smalle</span><a class="map-link" href="https://maps.google.com/?q=Cafe+t+Smalle+Jordaan+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Jordaan, historic brown café on canal steps).</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="thu-dinner"></div><div class="time">20:00</div><div class="slot-content">
         <div class="slot-title">Dinner · canal-side<span class="slot-cost">~€80–100 for two</span></div>
-        <div class="eat"><strong>Options:</strong> <span class="place">Brasserie Ambassade</span> (canal-side Herengracht, French-Dutch, romantic — top pick) · <span class="place">De Belhamel</span> (most-photographed canal corner, Art Nouveau) · <span class="place">Breda</span> (modern Dutch, chef very accommodating) · <span class="place">Rijsel</span> (French-Flemish, always excellent, book ahead).</div>
+        <div class="eat"><strong>Options:</strong> <span class="place">Brasserie Ambassade</span><a class="map-link" href="https://maps.google.com/?q=Brasserie+Ambassade+Herengracht+Amsterdam" target="_blank" rel="noopener">📍 map</a> (canal-side Herengracht, French-Dutch, romantic — top pick) · <span class="place">De Belhamel</span><a class="map-link" href="https://maps.google.com/?q=De+Belhamel+Amsterdam" target="_blank" rel="noopener">📍 map</a> (most-photographed canal corner, Art Nouveau) · <span class="place">Breda</span><a class="map-link" href="https://maps.google.com/?q=Restaurant+Breda+Amsterdam" target="_blank" rel="noopener">📍 map</a> (modern Dutch, chef very accommodating) · <span class="place">Rijsel</span><a class="map-link" href="https://maps.google.com/?q=Rijsel+Restaurant+Amsterdam" target="_blank" rel="noopener">📍 map</a> (French-Flemish, always excellent, book ahead).</div>
         <div class="warn"><strong>Onion-safe:</strong> Ambassade — sole meunière safest. De Belhamel — grilled fish without sauce. All can modify on request.</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="thu-cruise"></div><div class="time">21:30</div><div class="slot-content">
         <div class="slot-title">Blue-hour canal cruise <span class="pill pill-todo">Book</span><span class="slot-cost">€20–30 pp</span></div>
-        <div class="slot-note"><span class="place">Lovers</span> or <span class="place">Stromma</span> · 75 min. May 28 sunset is 21:32 — 21:00 boat catches sunset → blue hour → city lights.</div>
+        <div class="slot-note"><span class="place">Lovers</span><a class="map-link" href="https://maps.google.com/?q=Lovers+Canal+Cruises+Amsterdam" target="_blank" rel="noopener">📍 map</a> or <span class="place">Stromma</span><a class="map-link" href="https://maps.google.com/?q=Stromma+Canal+Cruise+Amsterdam" target="_blank" rel="noopener">📍 map</a> · 75 min. May 28 sunset is 21:32 — 21:00 boat catches sunset → blue hour → city lights.</div>
         <div class="slot-photo">Skinny Bridge lit at night, Magere Brug from the water, reflections</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Lovers+Canal+Cruises+Amsterdam+Centraal" target="_blank" rel="noopener">📍 Cruise departure</a></div></div></div>
     </div>
   </div>
 
@@ -656,43 +660,43 @@ strong { font-weight: 600; color: var(--ink); }
     <div class="day-body">
       <div class="slot"><div class="checkbox" data-key="fri-breakfast"></div><div class="time">09:30</div><div class="slot-content">
         <div class="slot-title">Breakfast · De Pijp<span class="slot-cost">~€20–30 for two</span></div>
-        <div class="eat"><strong>Options:</strong> <span class="place">Scandinavian Embassy</span> (best filter coffee in Amsterdam, Nordic pastries, skyr bowls) · <span class="place">Bakers & Roasters</span> (hearty NZ brunch, great juices) · <span class="place">Coffee & Coconuts</span> (huge cinema café, photogenic) · <span class="place">Lot Sixty One</span> (serious coffee, light bites, Kinkerstraat).</div>
+        <div class="eat"><strong>Options:</strong> <span class="place">Scandinavian Embassy</span><a class="map-link" href="https://maps.google.com/?q=Scandinavian+Embassy+Amsterdam+De+Pijp" target="_blank" rel="noopener">📍 map</a> (best filter coffee in Amsterdam, Nordic pastries, skyr bowls) · <span class="place">Bakers & Roasters</span><a class="map-link" href="https://maps.google.com/?q=Bakers+and+Roasters+Amsterdam+De+Pijp" target="_blank" rel="noopener">📍 map</a> (hearty NZ brunch, great juices) · <span class="place">Coffee & Coconuts</span><a class="map-link" href="https://maps.google.com/?q=Coffee+and+Coconuts+Amsterdam" target="_blank" rel="noopener">📍 map</a> (huge cinema café, photogenic) · <span class="place">Lot Sixty One</span><a class="map-link" href="https://maps.google.com/?q=Lot+Sixty+One+Coffee+Amsterdam" target="_blank" rel="noopener">📍 map</a> (serious coffee, light bites, Kinkerstraat).</div>
         <div class="warn"><strong>Onion-safe:</strong> all four are very safe — pastries, bowls, eggs. Avoid egg ranchero / shakshuka at B&R.</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="fri-market"></div><div class="time">10:30</div><div class="slot-content">
         <div class="slot-title">Albert Cuyp Market</div>
         <div class="slot-note">Massive open-air market — 260 stalls.</div>
-        <div class="eat"><strong>What to try:</strong> fresh stroopwafel (made in front, safe), poffertjes (mini pancakes, safe), <span class="place">Lanskroon Bakery</span> nearby for honey stroopwafels.</div>
+        <div class="eat"><strong>What to try:</strong> fresh stroopwafel (made in front, safe), poffertjes (mini pancakes, safe), <span class="place">Lanskroon Bakery</span><a class="map-link" href="https://maps.google.com/?q=Lanskroon+Amsterdam" target="_blank" rel="noopener">📍 map</a> nearby for honey stroopwafels.</div>
         <div class="warn"><strong>Onion warning:</strong> herring sandwich loaded with raw onion. Kibbeling safe but garlic sauce often has onion — ask. Frites with mayo always safe.</div>
         <div class="slot-photo">Stall colors, market portraits, hands at work making stroopwafels</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Albert+Cuypmarkt+Amsterdam" target="_blank" rel="noopener">📍 Albert Cuyp Market</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="fri-foodhall"></div><div class="time">12:30</div><div class="slot-content">
         <div class="slot-title">Lunch<span class="slot-cost">~€25–35 for two</span></div>
-        <div class="eat"><strong>Options:</strong> <span class="place">De Foodhallen</span> (indoor food hall in old tram depot, 20+ stalls — bitterballen + pizza safest) · <span class="place">FULU Toko</span> (modern Indonesian, onion-free options available) · <span class="place">Brouwerij 't IJ</span> (brewery in windmill, bar snacks + AF beer) · or stay at Albert Cuyp and graze — stroopwafels, poffertjes, kibbeling (plain).</div>
+        <div class="eat"><strong>Options:</strong> <span class="place">De Foodhallen</span><a class="map-link" href="https://maps.google.com/?q=De+Foodhallen+Amsterdam" target="_blank" rel="noopener">📍 map</a> (indoor food hall in old tram depot, 20+ stalls — bitterballen + pizza safest) · <span class="place">FULU Toko</span><a class="map-link" href="https://maps.google.com/?q=FULU+Toko+Amsterdam" target="_blank" rel="noopener">📍 map</a> (modern Indonesian, onion-free options available) · <span class="place">Brouwerij 't IJ</span><a class="map-link" href="https://maps.google.com/?q=Brouwerij+t+IJ+Amsterdam" target="_blank" rel="noopener">📍 map</a> (brewery in windmill, bar snacks + AF beer) · or stay at Albert Cuyp and graze — stroopwafels, poffertjes, kibbeling (plain).</div>
         <div class="warn"><strong>Onion-safe:</strong> Foodhallen bao has scallions — ask plain pork. Bitterballen usually safe. Pizza/pasta stalls always safe.</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="fri-weed"></div><div class="time">13:45</div><div class="slot-content">
         <div class="slot-title">Coffeeshop stop</div>
-        <div class="slot-weed"><strong>Coffeeshop pick:</strong> <span class="place">Boerejongens Utrechtsestraat</span> — apothecary-style marble counters, photogenic, knowledgeable staff, right en route to Concerto. <em>Alt:</em> <span class="place">Tweede Kamer</span> (small, Jordaan, intellectual vibe). <em>Alt:</em> <span class="place">420 Café</span> (Jordaan, cosy, locals mix).</div>
+        <div class="slot-weed"><strong>Coffeeshop pick:</strong> <span class="place">Boerejongens Utrechtsestraat</span><a class="map-link" href="https://maps.google.com/?q=Boerejongens+Utrechtsestraat+Amsterdam" target="_blank" rel="noopener">📍 map</a> — apothecary-style marble counters, photogenic, knowledgeable staff, right en route to Concerto. <em>Alt:</em> <span class="place">Tweede Kamer</span><a class="map-link" href="https://maps.google.com/?q=Tweede+Kamer+Coffeeshop+Amsterdam" target="_blank" rel="noopener">📍 map</a> (small, Jordaan, intellectual vibe). <em>Alt:</em> <span class="place">420 Café</span><a class="map-link" href="https://maps.google.com/?q=420+Cafe+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Jordaan, cosy, locals mix).</div>
       </div></div>
       <div class="slot"><div class="checkbox" data-key="fri-vinyl"></div><div class="time">14:00</div><div class="slot-content">
-        <div class="slot-title"><span class="place">Concerto</span> · vinyl shop</div>
+        <div class="slot-title"><span class="place">Concerto</span><a class="map-link" href="https://maps.google.com/?q=Concerto+Record+Shop+Utrechtsestraat+Amsterdam" target="_blank" rel="noopener">📍 map</a> · vinyl shop</div>
         <div class="slot-note">Utrechtsestraat 52–60. Biggest record shop in Europe, multiple floors, every genre. Listening stations. Plan generous time.</div>
-        <div class="alt"><span class="alt-label">Also worth</span><span class="place">Velvet Music</span> (curated) · <span class="place">Record Friend</span> (all secondhand) · <span class="place">Killa Cuts</span> (jazz/hip-hop)</div>
-      </div></div>
+        <div class="alt"><span class="alt-label">Also worth</span><span class="place">Velvet Music</span><a class="map-link" href="https://maps.google.com/?q=Velvet+Music+Amsterdam" target="_blank" rel="noopener">📍 map</a> (curated) · <span class="place">Record Friend</span><a class="map-link" href="https://maps.google.com/?q=Record+Friend+Amsterdam" target="_blank" rel="noopener">📍 map</a> (all secondhand) · <span class="place">Killa Cuts</span><a class="map-link" href="https://maps.google.com/?q=Killa+Cuts+Amsterdam" target="_blank" rel="noopener">📍 map</a> (jazz/hip-hop)</div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Concerto+Utrechtsestraat+Amsterdam" target="_blank" rel="noopener">📍 Concerto</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="fri-ferry"></div><div class="time">16:00</div><div class="slot-content">
         <div class="slot-title">Free ferry behind Centraal to NDSM</div>
         <div class="slot-note">Ferry every 10–15 min. ~15-min crossing. Free.</div>
         <div class="slot-photo">From the ferry deck — Centraal receding, A'DAM tower, EYE Filmmuseum</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=NDSM+Ferry+Amsterdam" target="_blank" rel="noopener">📍 Ferry terminal</a><a class="map-link" href="https://maps.google.com/?q=NDSM+Wharf+Amsterdam" target="_blank" rel="noopener">📍 NDSM</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="fri-straat"></div><div class="time">16:30</div><div class="slot-content">
         <div class="slot-title">STRAAT Museum<span class="slot-cost">€18.50 pp</span></div>
         <div class="slot-note">Warehouse of full-scale street art murals. ~90 min.</div>
         <div class="slot-photo">Floor-to-ceiling murals + the warehouse architecture itself</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=STRAAT+Museum+NDSM+Amsterdam" target="_blank" rel="noopener">📍 STRAAT Museum</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="fri-dinner"></div><div class="time">18:30</div><div class="slot-content">
         <div class="slot-title">Dinner · NDSM waterfront<span class="slot-cost">~€55–70 for two</span></div>
-        <div class="eat"><strong>Options:</strong> <span class="place">Pllek</span> (shipping containers + sand beach, casual, sunset view — top pick) · <span class="place">Noorderlicht Café</span> (greenhouse on NDSM, more vegan-friendly) · <span class="place">IJver</span> (polished waterfront, slightly smarter) · <span class="place">Café de Ceuvel</span> (sustainable eco-café on houseboats nearby, unique).</div>
+        <div class="eat"><strong>Options:</strong> <span class="place">Pllek</span><a class="map-link" href="https://maps.google.com/?q=Pllek+NDSM+Amsterdam" target="_blank" rel="noopener">📍 map</a> (shipping containers + sand beach, casual, sunset view — top pick) · <span class="place">Noorderlicht Café</span><a class="map-link" href="https://maps.google.com/?q=Noorderlicht+Cafe+NDSM+Amsterdam" target="_blank" rel="noopener">📍 map</a> (greenhouse on NDSM, more vegan-friendly) · <span class="place">IJver</span><a class="map-link" href="https://maps.google.com/?q=IJver+Restaurant+Amsterdam" target="_blank" rel="noopener">📍 map</a> (polished waterfront, slightly smarter) · <span class="place">Café de Ceuvel</span><a class="map-link" href="https://maps.google.com/?q=Cafe+de+Ceuvel+Amsterdam" target="_blank" rel="noopener">📍 map</a> (sustainable eco-café on houseboats nearby, unique).</div>
         <div class="warn"><strong>Onion-safe at Pllek:</strong> grilled fish of the day (no salsa), plain burger without caramelised onion, harvest bowl without onion. Kitchen is flexible — just ask.</div>
         <div class="slot-photo">Golden hour over the IJ, container architecture, beach + boat silhouettes</div>
       </div></div>
@@ -714,7 +718,7 @@ strong { font-weight: 600; color: var(--ink); }
     <div class="day-body">
       <div class="slot"><div class="checkbox" data-key="sat-breakfast"></div><div class="time">08:30</div><div class="slot-content">
         <div class="slot-title">Breakfast · before day trip<span class="slot-cost">~€20–30 for two</span></div>
-        <div class="eat"><strong>Options:</strong> <span class="place">Winkel 43</span> (apple pie + coffee, Jordaan — if you haven't been) · <span class="place">Back to Black</span> (excellent coffee, De Pijp) · <span class="place">Bakers & Roasters</span> (hearty, fuels a day out) · hotel breakfast if included.</div>
+        <div class="eat"><strong>Options:</strong> <span class="place">Winkel 43</span><a class="map-link" href="https://maps.google.com/?q=Winkel+43+Noordermarkt+Amsterdam" target="_blank" rel="noopener">📍 map</a> (apple pie + coffee, Jordaan — if you haven't been) · <span class="place">Back to Black</span><a class="map-link" href="https://maps.google.com/?q=Back+to+Black+Coffee+Amsterdam" target="_blank" rel="noopener">📍 map</a> (excellent coffee, De Pijp) · <span class="place">Bakers & Roasters</span><a class="map-link" href="https://maps.google.com/?q=Bakers+and+Roasters+Amsterdam+De+Pijp" target="_blank" rel="noopener">📍 map</a> (hearty, fuels a day out) · hotel breakfast if included.</div>
         <div class="warn"><strong>Onion-safe:</strong> all safe — pastries, pancakes, eggs. Avoid savoury specials with sauces.</div>
       </div></div>
       <p style="font-size:0.85rem;color:var(--ink-soft);margin:0.5rem 0 0.8rem;">Tap an option to pick your day trip.</p>
@@ -722,36 +726,36 @@ strong { font-weight: 600; color: var(--ink); }
       <div class="option" data-trip="zandvoort">
         <div class="option-title">Zandvoort <span class="badge">★ recommended</span></div>
         <div class="option-meta">Train · 30 min · €11 pp return · every 30 min from Centraal</div>
-        <div class="option-body">North Sea beach + dunes. Walk north toward Bloemendaal. Long beach-club lunch with feet in sand.<br><br><strong>Lunch:</strong> <span class="place">Republiek</span> (~€40 pp, grilled fish onion-safe) · <span class="place">Woodstock 69</span> (~€35 pp, sharing plates) · <span class="place">Tijn Akersloot</span> (~€30 pp). Back ~17:00.</div>
+        <div class="option-body">North Sea beach + dunes. Walk north toward Bloemendaal. Long beach-club lunch with feet in sand.<br><br><strong>Lunch:</strong> <span class="place">Republiek</span><a class="map-link" href="https://maps.google.com/?q=Republiek+Zandvoort" target="_blank" rel="noopener">📍 map</a> (~€40 pp, grilled fish onion-safe) · <span class="place">Woodstock 69</span><a class="map-link" href="https://maps.google.com/?q=Woodstock+69+Zandvoort" target="_blank" rel="noopener">📍 map</a> (~€35 pp, sharing plates) · <span class="place">Tijn Akersloot</span><a class="map-link" href="https://maps.google.com/?q=Tijn+Akersloot+Zandvoort" target="_blank" rel="noopener">📍 map</a> (~€30 pp). Back ~17:00.</div>
       </div>
 
       <div class="option" data-trip="haarlem">
         <div class="option-title">Haarlem <span class="badge">if rain</span></div>
         <div class="option-meta">Train · 15 min · €9 pp return</div>
-        <div class="option-body">Compact Dutch old town. <span class="place">Frans Hals Museum</span> (€18 pp, 17th-c portraits). Grote Markt cathedral.<br><br><strong>Lunch:</strong> <span class="place">Jopenkerk</span> (~€45 pp, brewery in church) · <span class="place">Native Haarlem</span> (~€35 pp).</div>
+        <div class="option-body">Compact Dutch old town. <span class="place">Frans Hals Museum</span><a class="map-link" href="https://maps.google.com/?q=Frans+Hals+Museum+Haarlem" target="_blank" rel="noopener">📍 map</a> (€18 pp, 17th-c portraits). Grote Markt cathedral.<br><br><strong>Lunch:</strong> <span class="place">Jopenkerk</span><a class="map-link" href="https://maps.google.com/?q=Jopenkerk+Haarlem" target="_blank" rel="noopener">📍 map</a> (~€45 pp, brewery in church) · <span class="place">Native Haarlem</span><a class="map-link" href="https://maps.google.com/?q=Native+Haarlem" target="_blank" rel="noopener">📍 map</a> (~€35 pp).</div>
       </div>
 
       <div class="option" data-trip="zaanse">
         <div class="option-title">Zaanse Schans <span class="badge">if bright</span></div>
         <div class="option-meta">Train · 20 min · €8 pp return</div>
-        <div class="option-body">Working windmills, wooden shoe workshop, cheese farm. Touristy but photo-spectacular in good light.<br><br><strong>Lunch:</strong> <span class="place">De Hoop op d'Swarte Walvis</span> (~€50 pp, historic) · <span class="place">De Kraai</span> (~€20 pp, pancakes).</div>
+        <div class="option-body">Working windmills, wooden shoe workshop, cheese farm. Touristy but photo-spectacular in good light.<br><br><strong>Lunch:</strong> <span class="place">De Hoop op d'Swarte Walvis</span><a class="map-link" href="https://maps.google.com/?q=De+Hoop+op+d+Swarte+Walvis+Zaanse+Schans" target="_blank" rel="noopener">📍 map</a> (~€50 pp, historic) · <span class="place">De Kraai</span><a class="map-link" href="https://maps.google.com/?q=De+Kraai+Zaanse+Schans" target="_blank" rel="noopener">📍 map</a> (~€20 pp, pancakes).</div>
       </div>
 
       <h3 style="margin-top:1.2rem;">Daytime back</h3>
       <div class="slot"><div class="checkbox" data-key="sat-weed"></div><div class="time">17:30</div><div class="slot-content">
         <div class="slot-title">Coffeeshop stop · back in Amsterdam</div>
-        <div class="slot-weed"><strong>Coffeeshop pick:</strong> <span class="place">Bluebird</span> (Sint Antoniesbreestraat 71) — big upstairs lounge, fish-tank wall, relaxed. <em>Alt:</em> <span class="place">Greenhouse Effect</span> (Warmoesstraat, the famous one, more touristy). <em>Alt:</em> <span class="place">Paradox</span> (Jordaan, quiet, back to basics). Stay light — Blauw dinner is coming.</div>
+        <div class="slot-weed"><strong>Coffeeshop pick:</strong> <span class="place">Bluebird</span><a class="map-link" href="https://maps.google.com/?q=Bluebird+Coffeeshop+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Sint Antoniesbreestraat 71) — big upstairs lounge, fish-tank wall, relaxed. <em>Alt:</em> <span class="place">Greenhouse Effect</span><a class="map-link" href="https://maps.google.com/?q=Greenhouse+Effect+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Warmoesstraat, the famous one, more touristy). <em>Alt:</em> <span class="place">Paradox</span><a class="map-link" href="https://maps.google.com/?q=Coffeeshop+Paradox+Jordaan+Amsterdam" target="_blank" rel="noopener">📍 map</a> (Jordaan, quiet, back to basics). Stay light — Blauw dinner is coming.</div>
       </div></div>
 
       <h3 style="margin-top:1.2rem;">Evening</h3>
       <div class="slot"><div class="checkbox" data-key="sat-trip"></div><div class="time">DAY</div><div class="slot-content">
         <div class="slot-title">Day trip <span id="trip-display" style="color:var(--accent);font-weight:500;">(pick above)</span></div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Zaanse+Schans+Netherlands" target="_blank" rel="noopener">📍 Zaanse Schans</a><a class="map-link" href="https://maps.google.com/?q=Zandvoort+Beach+Netherlands" target="_blank" rel="noopener">📍 Zandvoort</a><a class="map-link" href="https://maps.google.com/?q=Haarlem+Netherlands" target="_blank" rel="noopener">📍 Haarlem</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="sat-dinner"></div><div class="time">19:30</div><div class="slot-content">
-        <div class="slot-title"><span class="place">Restaurant Blauw</span> · rijsttafel <span class="pill pill-todo">Book</span><span class="slot-cost">~€80 for two</span></div>
+        <div class="slot-title"><span class="place">Restaurant Blauw</span><a class="map-link" href="https://maps.google.com/?q=Restaurant+Blauw+Amsterdam" target="_blank" rel="noopener">📍 map</a> · rijsttafel <span class="pill pill-todo">Book</span><span class="slot-cost">~€80 for two</span></div>
         <div class="eat"><strong>Why:</strong> Amsterdam's most acclaimed Indonesian. The rijsttafel is 15–20 small dishes built around rice. <strong>Signature dishes:</strong> <em>daging rendang</em> (slow-cooked Sumatran beef), <em>ayam madu</em> (honey chicken), <em>sate kambing</em> (goat satay), <em>gado-gado</em>, <em>sambal goreng kentang</em>. Bintang beer. Pandan panna cotta for dessert.</div>
         <div class="warn"><strong>Onion situation (honest):</strong> Indonesian food is allium-foundational. Most sambal, marinades, sayur dishes, and the <em>bawang goreng</em> garnish all contain alliums. Options: <strong>(1)</strong> call in advance for an allium-free rijsttafel — they'll accommodate; <strong>(2)</strong> order à la carte — plain nasi putih, sate ayam grilled-only without marinade, gulai if onion-free. Full Selera won't work without a kitchen workaround.</div>
-        <div class="alt"><span class="alt-label">Alternatives if Blauw can't</span><span class="place">Kantjil & de Tijger</span> (~€60, casual, central) · <span class="place">Tashi Deleng</span> (~€50, smaller menu, easier to modify) · <span class="place">De Belhamel</span> (modern Dutch, easy onion-free, canal-side)</div>
+        <div class="alt"><span class="alt-label">Alternatives if Blauw can't</span><span class="place">Kantjil & de Tijger</span><a class="map-link" href="https://maps.google.com/?q=Kantjil+de+Tijger+Amsterdam" target="_blank" rel="noopener">📍 map</a> (~€60, casual, central) · <span class="place">Tashi Deleng</span><a class="map-link" href="https://maps.google.com/?q=Tashi+Deleng+Amsterdam" target="_blank" rel="noopener">📍 map</a> (~€50, smaller menu, easier to modify) · <span class="place">De Belhamel</span><a class="map-link" href="https://maps.google.com/?q=De+Belhamel+Amsterdam" target="_blank" rel="noopener">📍 map</a> (modern Dutch, easy onion-free, canal-side)</div>
       </div></div>
     </div>
   </div>
@@ -773,7 +777,7 @@ strong { font-weight: 600; color: var(--ink); }
       <div class="slot"><div class="checkbox" data-key="sun-airport"></div><div class="time">06:30</div><div class="slot-content">
         <div class="slot-title">Train or Uber to Schiphol</div>
         <div class="slot-note">Train €5.60 pp, 17 min. Uber ~€45, 25 min.</div>
-      </div></div>
+      <div class="slot-maps"><a class="map-link" href="https://maps.google.com/?q=Amsterdam+Airport+Schiphol" target="_blank" rel="noopener">📍 Schiphol</a></div></div></div>
       <div class="slot"><div class="checkbox" data-key="sun-security"></div><div class="time">07:00</div><div class="slot-content"><div class="slot-title">At airport, through security</div></div></div>
       <div class="slot"><div class="checkbox" data-key="sun-flight"></div><div class="time">09:50</div><div class="slot-content"><div class="slot-title">Flight home <span class="pill pill-booked">Booked</span></div></div></div>
     </div>
@@ -838,7 +842,7 @@ strong { font-weight: 600; color: var(--ink); }
 </section>
 
 <footer>
-  Saved offline · State saves automatically · v8 interactive
+  Saved offline · State saves automatically · v10 · <a href="https://github.com" target="_blank" style="color:var(--ink-faded);text-decoration:none;">GitHub Pages</a>
   <br>
   <button onclick="if(confirm('Reset all checkboxes and choices?')){localStorage.removeItem('nltrip');location.reload();}">Reset all</button>
 </footer>
@@ -1066,6 +1070,7 @@ document.querySelectorAll('nav a').forEach(a => {
   });
 });
 </script>
+
 
 </body>
 </html>
